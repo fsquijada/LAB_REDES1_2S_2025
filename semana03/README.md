@@ -91,8 +91,8 @@ Al accesar a un dispositivo de cisco primero aparecerá el nombre del dispositiv
 | Modo usuario (Exec de usuario)        | >              | Solo ver información básica (no configuración) |
 | Modo privilegiado (Exec privilegiado) | #              | Ver configuraciones completas y guardar cambios (Requiere "enable" en modo usuario) |
 | Modo configuración global             | (config)#      | Cambiar la configuración del dispositivo (Requiere "configure terminal" en modo privilegiado) |
-| Modo interfaz                         | (config-if)#   | Cambiar la configuración del dispositivo |
-| Modo interfaz                         | (config-line)# | Configurar accesos remotos como consola o SSH |
+| Modo interfaz                         | (config-if)#   | Configurar puertos físicos o lógicos (Modo Acceso/Troncal, IP, etc) |
+| Modo de línea                         | (config-line)# | Configurar accesos remotos como consola o SSH |
 
 # Comandos basicos de Switch con IOS
 
