@@ -16,6 +16,7 @@
   - [Cambio de nombre](#cambio-de-nombre)
   - [Revertir una configuración](#revertir-una-configuracion)
   - [Guardar configuración del dispositivo](#guardar-configuracion-del-dispositivo)
+  - [Revisar configuración del dispositivo](#revisar-configuracion-del-dispositivo)
 
 # Captura de paquetes ARP e ICMP
 
@@ -278,9 +279,24 @@ Con este comando se revierte la configuración del banner de login, por lo que y
 
 Dentro del modo EXEC privilegiado se tiene el comando "`copy running-config startup-config`" que guarda la configuración del mismo. También se puede usar el comando simplificado "`write`" para guardar la configuración del dispositivo.
 
-Un ejemplo sería el siguiente:
+Por lo que podremos guardar las configuraciones de la siguiente manera:
+
+```
+SW1# copy running-config startup-config
+```
+
+O simplemente utilizar:
 
 ```
 SW1# write
 ```
 
+## Revisar configuración del dispositivo
+
+Para poder revisar la configuración general del switch (como configuración de puertos, entre otras cosas) se puede ingresar el siguiente comando desde el modo de EXEC privilegiado
+
+```
+SW1# show running-config
+```
+
+Con este comando se muestra la configuración actual en ejecución que se encuentra en la memoria RAM del dispositivo (Y se puede perder si en dado caso no se ha guardado dicha configuración).
