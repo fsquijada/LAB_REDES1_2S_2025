@@ -8,3 +8,7 @@ Repositorio del laboratorio de Redes de Computadoras 1 Segundo Semestre del 2025
   - [Tabla ARP en VPC](semana03/README.md#tabla-arp-en-vpc)
   - [Modos de operacion en dispositivos Cisco](semana03/README.md#modos-de-operacion-en-dispositivos-cisco)
   - [Comandos basicos de Switch con IOS](semana03/README.md#comandos-basicos-de-switch-con-ios)
+- [Semana 4](semana04/README.md#contenido-semana-4)
+  - [VLANS](semana04/README.md#vlans)
+  - [VTP - Protocolo de troncalización de VLAN](semana04/README.md#vtp---protocolo-de-troncalización-de-vlan)
+  
