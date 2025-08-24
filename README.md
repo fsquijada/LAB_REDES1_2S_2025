@@ -11,4 +11,7 @@ Repositorio del laboratorio de Redes de Computadoras 1 Segundo Semestre del 2025
 - [Semana 4](semana04/README.md#contenido-semana-4)
   - [VLANS](semana04/README.md#vlans)
   - [VTP - Protocolo de troncalización de VLAN](semana04/README.md#vtp---protocolo-de-troncalización-de-vlan)
+- [Semana 5](semana05/README.md#contenido-semana-5)
+  - [Spanning Tree Protocol (STP)](semana05/README.md#spanning-tree-protocol-stp)
+  - [Sintaxis de Cisco IOs en Sublime Text (Extra)](semana05/README.md#sintaxis-de-cisco-ios-en-sublime-text-extra)
   
