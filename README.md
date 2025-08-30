@@ -14,4 +14,5 @@ Repositorio del laboratorio de Redes de Computadoras 1 Segundo Semestre del 2025
 - [Semana 5](semana05/README.md#contenido-semana-5)
   - [Spanning Tree Protocol (STP)](semana05/README.md#spanning-tree-protocol-stp)
   - [Sintaxis de Cisco IOs en Sublime Text (Extra)](semana05/README.md#sintaxis-de-cisco-ios-en-sublime-text-extra)
-  
+- [Semana 6](semana06/README.md#contenido-semana-6)
+  - [EtherChannel](semana06/README.md#etherchannel)
