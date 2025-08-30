@@ -5,6 +5,7 @@
   - [LACP](#lacp-link-aggregation-control-protocol)
   - [PAGP](#pagp-port-aggregation-protocol)
   - [Verificación de la configuración](#verificación-de-la-configuración)
+  - [Script de comandos realizados en clase](#script-de-comandos-realizados-en-clase)
 
 # EtherChannel
 
@@ -126,4 +127,159 @@ Para mostrar el tipo de configuración que se utiliza, se puede utilizar el sigu
 
 ```bash
 show etherchannel summary
+```
+
+## Script de comandos realizados en clase
+
+### Switch SW1
+```bash
+enable 
+configure terminal
+  hostname SW1
+  ! Crear VLAN
+  vlan 100
+    name SOPORTE
+    exit
+  vlan 99
+    name NATIVE
+    exit
+  ! Configurando Puertos
+  interface FastEthernet 0/10
+    switchport mode access
+    switchport access vlan 100
+    exit
+  interface range FastEthernet 0/3-4
+    switchport mode trunk
+    switchport trunk native vlan 99
+    switchport trunk allowed vlan 1,99,100
+    exit
+  ! Creando Port-Channel
+  interface Port-Channel 1
+    description SW1 - SW2
+    switchport mode trunk
+    switchport trunk native vlan 99
+    switchport trunk allowed vlan 1,99,100
+    exit
+  interface range FastEthernet 0/3-4
+    channel-protocol lacp
+    channel-group 1 mode active
+    exit
+  exit
+```
+
+### Switch SW2
+```bash
+enable 
+configure terminal
+  hostname SW2
+  ! Crear VLAN
+  vlan 100
+    name SOPORTE
+    exit
+  vlan 99
+    name NATIVE
+    exit
+  ! Configurando Puertos
+  interface range FastEthernet 0/1-4
+    switchport mode trunk
+    switchport trunk native vlan 99
+    switchport trunk allowed vlan 1,99,100
+    exit
+  ! Creando Port-Channel
+  interface Port-Channel 1
+    description SW1 - SW2
+    switchport mode trunk
+    switchport trunk native vlan 99
+    switchport trunk allowed vlan 1,99,100
+    exit
+  interface range FastEthernet 0/3-4
+    channel-protocol lacp
+    channel-group 1 mode active
+    exit
+  interface Port-Channel 2
+    description SW2 - SW3
+    switchport mode trunk
+    switchport trunk native vlan 99
+    switchport trunk allowed vlan 1,99,100
+    exit
+  interface range FastEthernet 0/3-4
+    channel-group 2 mode on
+    exit
+  exit
+```
+
+### Switch SW3
+```bash
+enable 
+configure terminal
+  hostname SW3
+  ! Crear VLAN
+  vlan 100
+    name SOPORTE
+    exit
+  vlan 99
+    name NATIVE
+    exit
+  ! Configurando Puertos
+  interface range FastEthernet 0/1-4
+    switchport mode trunk
+    switchport trunk native vlan 99
+    switchport trunk allowed vlan 1,99,100
+    exit
+  ! Creando Port-Channel
+  interface Port-Channel 2
+    description SW2 - SW3
+    switchport mode trunk
+    switchport trunk native vlan 99
+    switchport trunk allowed vlan 1,99,100
+    exit
+  interface range FastEthernet 0/1-2
+    channel-group 2 mode on
+    exit
+  interface Port-Channel 3
+    description SW3 - SW4
+    switchport mode trunk
+    switchport trunk native vlan 99
+    switchport trunk allowed vlan 1,99,100
+    exit
+  interface range FastEthernet 0/3-4
+    channel-protocol pagp
+    channel-group 3 mode desirable
+    exit
+  exit
+```
+
+### Switch SW4
+```bash
+enable 
+configure terminal
+  hostname SW4
+  ! Crear VLAN
+  vlan 100
+    name SOPORTE
+    exit
+  vlan 99
+    name NATIVE
+    exit
+  ! Configurando Puertos
+  interface FastEthernet 0/10
+    switchport mode access
+    switchport access vlan 100
+  interface range FastEthernet 0/3-4
+    switchport mode trunk
+    switchport trunk native vlan 99
+    switchport trunk allowed vlan 1,99,100
+    exit
+  ! Creando Port-Channel
+  interface Port-Channel 3
+    description SW3 - SW4
+    switchport mode trunk
+    switchport trunk native vlan 99
+    switchport trunk allowed vlan 1,99,100
+    exit
+  interface range FastEthernet 0/3-4
+    channel-protocol pagp
+    channel-group 3 mode auto
+    exit
+  exit
 ```
