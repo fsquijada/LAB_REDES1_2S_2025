@@ -19,10 +19,10 @@ Se configuran manualmente los enlaces sin ningún protocolo de negociación. Es 
 La configuración admite las siguientes configuraciones:
 
 
-    | Modo en el primer switch | Modo en el segundo switch | Estado del EtherChannel  |
-    |--------------------------|---------------------------|--------------------------|
-    | **ON**                   | **ON**                    | Se forma EtherChannel    |
-    | **ON**                   | Cualquier otro modo       | No se forma EtherChannel |
+| Modo en el primer switch | Modo en el segundo switch | Estado del EtherChannel  |
+|:------------------------:|:-------------------------:|:------------------------:|
+| **ON**                   | **ON**                    | Se forma EtherChannel    |
+| **ON**                   | Cualquier otro modo       | No se forma EtherChannel |
 
 
 Para configurar este modo se deben de utilizar los siguientes comandos:
@@ -48,11 +48,11 @@ Protocolo estándar que permite la negociación automática de enlaces entre dis
 La configuración admite las siguientes configuraciones:
 
 
-    | Modo en el primer switch | Modo en el segundo switch | Estado del EtherChannel  |
-    |--------------------------|---------------------------|--------------------------|
-    | **active**               | **active**                | Se forma EtherChannel    |
-    | **active**               | **passive**               | Se forma EtherChannel    |
-    | **passive**              | **passive**               | No se forma EtherChannel |
+| Modo en el primer switch | Modo en el segundo switch | Estado del EtherChannel  |
+|:------------------------:|:-------------------------:|:------------------------:|
+| **active**               | **active**                | Se forma EtherChannel    |
+| **active**               | **passive**               | Se forma EtherChannel    |
+| **passive**              | **passive**               | No se forma EtherChannel |
 
 Para configurar este modo se deben de utilizar los siguientes comandos:
 
@@ -89,11 +89,11 @@ Protocolo propietario de Cisco similar a LACP, diseñado para facilitar la confi
 La configuración admite las siguientes configuraciones:
 
 
-    | Modo en el primer switch | Modo en el segundo switch | Estado del EtherChannel  |
-    |--------------------------|---------------------------|--------------------------|
-    | **desirable**            | **desirable**             | Se forma EtherChannel    |
-    | **desirable**            | **auto**                  | Se forma EtherChannel    |
-    | **auto**                 | **auto**                  | No se forma EtherChannel |
+| Modo en el primer switch | Modo en el segundo switch | Estado del EtherChannel  |
+|:------------------------:|:-------------------------:|:------------------------:|
+| **desirable**            | **desirable**             | Se forma EtherChannel    |
+| **desirable**            | **auto**                  | Se forma EtherChannel    |
+| **auto**                 | **auto**                  | No se forma EtherChannel |
 
 Para configurar este modo se deben de utilizar los siguientes comandos:
 
