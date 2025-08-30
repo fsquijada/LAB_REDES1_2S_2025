@@ -120,7 +120,7 @@ channel-group 3 mode [auto/desirable] # Se coloca el mismo número que el creado
 exit
 do write # Guarda la configuracion
 ```
-## Verificando la configuración
+## Verificación de la configuración
 
 Para mostrar el tipo de configuración que se utiliza, se puede utilizar el siguiente comando en el modo EXEC Privilegiado:
 
