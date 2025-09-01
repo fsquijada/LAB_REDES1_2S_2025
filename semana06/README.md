@@ -66,6 +66,7 @@ description [descripcion] # Esta descripcion puede ser opcional
 # Se puede configurar modo troncal, VLAN Nativa y las VLANs con las que trabajará la interfaz lógica
 exit
 interface range FastEthernet 0/1-2 # En esta parte se colocan las interfaces que se desean agrupar
+channel-protocol lacp # Establecemos que se trabajará con el protocolo lacp
 channel-group 2 mode active # Se coloca el mismo número que el creado (en este ejemplo 2)
 exit
 do write # Guarda la configuracion
@@ -78,6 +79,7 @@ description [descripcion] # Esta descripcion puede ser opcional
 # Se puede configurar modo troncal, VLAN Nativa y las VLANs con las que trabajará la interfaz lógica
 exit
 interface range FastEthernet 0/1-2 # En esta parte se colocan las interfaces que se desean agrupar
+channel-protocol lacp # Establecemos que se trabajará con el protocolo lacp
 channel-group 2 mode [active/passive] # Se coloca el mismo número que el creado (en este ejemplo 2)
 exit
 do write # Guarda la configuracion
@@ -106,6 +108,7 @@ interface Port-Channel 3 # Se crea el portchannel
 description [descripcion] # Esta descripcion puede ser opcional
 exit
 interface range FastEthernet 0/1-2 # En esta parte se colocan las interfaces que se desean agrupar
+channel-protocol pagp # Establecemos que se trabajará con el protocolo pagp
 channel-group 3 mode desirable # Se coloca el mismo número que el creado (en este ejemplo 3)
 exit
 do write # Guarda la configuracion
@@ -117,6 +120,7 @@ interface Port-Channel 3 # Se crea el portchannel
 description [descripcion] # Esta descripcion puede ser opcional
 exit
 interface range FastEthernet 0/1-2 # En esta parte se colocan las interfaces que se desean agrupar
+channel-protocol pagp # Establecemos que se trabajará con el protocolo pagp
 channel-group 3 mode [auto/desirable] # Se coloca el mismo número que el creado (en este ejemplo 3)
 exit
 do write # Guarda la configuracion
