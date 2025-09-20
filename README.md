@@ -16,3 +16,7 @@ Repositorio del laboratorio de Redes de Computadoras 1 Segundo Semestre del 2025
   - [Sintaxis de Cisco IOs en Sublime Text (Extra)](semana05/README.md#sintaxis-de-cisco-ios-en-sublime-text-extra)
 - [Semana 6](semana06/README.md#contenido-semana-6)
   - [EtherChannel](semana06/README.md#etherchannel)
+- [Semana 7](semana07/README.md#contenido-semana-7)
+  - [Notación CIDR](semana07/README.md#notación-cidr)
+  - [Subnetting](semana07/README.md#subnetting)
+  - [Cálculo de Red](semana07/README.md#cálculo-de-red)
