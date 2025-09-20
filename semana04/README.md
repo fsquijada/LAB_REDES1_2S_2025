@@ -2,8 +2,8 @@
 
 - [VLANS](#vlans)
   - [Creación de VLANs](#creación-de-vlans)
-  - [Congiruación Enlace en modo Troncal](#configuración-enlace-en-modo-troncal)
-  - [Congiruación Enlace en modo Acceso](#configuración-enlace-en-modo-acceso)
+  - [Configuración Enlace en modo Troncal](#configuración-enlace-en-modo-troncal)
+  - [Configuración Enlace en modo Acceso](#configuración-enlace-en-modo-acceso)
   - [Verificación de la configuración](#verificación-de-la-configuración)
 - [VTP - Protocolo de troncalización de VLAN](#vtp---protocolo-de-troncalización-de-vlan)
   - [Comandos importantes en VTP](#comandos-importantes-en-vtp)
