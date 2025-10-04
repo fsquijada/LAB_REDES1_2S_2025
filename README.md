@@ -20,3 +20,7 @@ Repositorio del laboratorio de Redes de Computadoras 1 Segundo Semestre del 2025
   - [Notación CIDR](semana07/README.md#notación-cidr)
   - [Subnetting](semana07/README.md#subnetting)
   - [Cálculo de Red](semana07/README.md#cálculo-de-red)
+- [Semana 8](semana08/README.md#contenido-semana-8)
+  - [Enrutamiento Estático](semana08/README.md#enrutamiento-estático)
+- [Semana 9](semana09/README.md#contenido-semana-9)
+  - [Enrutamiento Dinámico](semana09/README.md#enrutamiento-dinámico)
