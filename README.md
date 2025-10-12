@@ -24,3 +24,5 @@ Repositorio del laboratorio de Redes de Computadoras 1 Segundo Semestre del 2025
   - [Enrutamiento Estático](semana08/README.md#enrutamiento-estático)
 - [Semana 9](semana09/README.md#contenido-semana-9)
   - [Enrutamiento Dinámico](semana09/README.md#enrutamiento-dinámico)
+- [Semana 10](semana10/README.md#contenido-semana-10)
+  - [Enrutamiento InterVLAN](semana10/README.md#enrutamiento-intervlan)
