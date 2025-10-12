@@ -247,4 +247,10 @@ configure terminal
     ip address 192.169.XX.129 255.255.255.224
     exit
   exit
+
+# IPs de Máquinas finales
+PC1: 192.169.XX.69 255.255.255.192 (192.169.XX.65 Gateway)
+PC2: 192.169.XX.3 255.255.255.192 (192.169.XX.1 Gateway)
+PC3: 192.169.XX.4 255.255.255.192 (192.169.XX.1 Gateway)
+PC4: 192.169.XX.130 255.255.255.224 (192.169.XX.129 Gateway)
 ```
