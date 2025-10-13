@@ -156,8 +156,8 @@ configure terminal
 
 # IPs de Máquinas finales
 PC01: 172.15.XX.10 255.255.255.192 (172.15.XX.1 Gateway)
-PC02: 172.15.XX.100 255.255.255.240 (172.16.XX.97 Gateway)
-PC03: 172.15.XX.80 255.255.255.224 (172.17.XX.65 Gateway)
+PC02: 172.15.XX.100 255.255.255.240 (172.15.XX.97 Gateway)
+PC03: 172.15.XX.80 255.255.255.224 (172.15.XX.65 Gateway)
 ```
 
 
