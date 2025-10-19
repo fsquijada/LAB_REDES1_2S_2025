@@ -26,3 +26,6 @@ Repositorio del laboratorio de Redes de Computadoras 1 Segundo Semestre del 2025
   - [Enrutamiento Dinámico](semana09/README.md#enrutamiento-dinámico)
 - [Semana 10](semana10/README.md#contenido-semana-10)
   - [Enrutamiento InterVLAN](semana10/README.md#enrutamiento-intervlan)
+- [Semana 11](semana11/README.md#contenido-semana-11)
+  - [Alta Disponibilitad (Default Gateway)](semana11/README.md#alta-disponibilidad-default-gateway)
+  - [Redistribución de rutas en enrutamiento dinamico](semana11/README.md#redistribución-de-enrutamiento-dinamico)
