@@ -4,6 +4,8 @@
   - [Comandos utilizados ejercicio 1](#comandos-utilizados-ejercicio-1)
 - [Redistribución de enrutamiento dinamico](#redistribución-de-enrutamiento-dinamico)
   - [Comandos utilizados ejercicio 2](#comandos-utilizados-ejercicio-2)
+- [Firewall (LISTAS DE ACCESO EXTENDIDAS)](#firewall-listas-de-acceso-extendidas)
+  - [Comandos utilizados](#comandos-utilizados)
 
 # Alta Disponibilidad (Default Gateway)
 
