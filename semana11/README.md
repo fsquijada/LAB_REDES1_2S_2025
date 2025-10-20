@@ -134,6 +134,7 @@ configure terminal
   # EIGRP
   router eigrp 100
     network 10.0.0.4 0.0.0.3
+    no auto-summary
     # Para distribuir las rutas de ospf en eigrp
     redistribute ospf 100 metric 10000 100 255 1 1500
     exit
@@ -153,8 +154,9 @@ configure terminal
   # EIGRP
   router eigrp 100
     network 10.0.0.4 0.0.0.3
+    no auto-summary
     # Para distribuir las rutas de rip en eigrp
-    redistribute ospf 100 metric 10000 100 255 1 1500
+    redistribute rip metric 10000 100 255 1 1500
     exit
   # RIP
   router rip
@@ -183,5 +185,6 @@ configure terminal
     network 192.169.XX.0
     network 192.169.XX.64
     network 192.169.XX.128
+    no auto-summary
   exit
 ```
