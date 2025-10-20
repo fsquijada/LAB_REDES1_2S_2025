@@ -4,6 +4,8 @@
   - [Comandos utilizados ejercicio 1](#comandos-utilizados-ejercicio-1)
 - [Redistribución de enrutamiento dinamico](#redistribución-de-enrutamiento-dinamico)
   - [Comandos utilizados ejercicio 2](#comandos-utilizados-ejercicio-2)
+- [Firewall (LISTAS DE ACCESO EXTENDIDAS)](#firewall-listas-de-acceso-extendidas)
+  - [Comandos utilizados](#comandos-utilizados)
 
 # Alta Disponibilidad (Default Gateway)
 
@@ -187,4 +189,45 @@ configure terminal
     network 192.169.XX.128
     no auto-summary
   exit
+```
+
+# Firewall (LISTAS DE ACCESO EXTENDIDAS)
+
+## Comandos utilizados
+
+```bash
+# Router ROAS
+enable
+configure terminal
+  # Creando las lista de acceso para la VLAN 10
+  ip access-list extended 110 # Las extendidas trabajan entre el 100 y 199
+    # <any/permit> <protocolo> <RED_DESDE> <WILD_DESDE> <RED_HASTA> <WILD_HASTA>
+    permit ip 172.15.XX.0 0.0.0.63 192.169.XX.0 0.0.0.63
+    # Aqui se pueden seguir poniendo redes a las que se desea que tenga comunicación
+    deny ip any any
+    exit
+  # Aplicando el bloqueo en la interfaz o subinterfaz
+  interface GigabitEthernet 0/0/0.10
+    ip access-group 110 in
+    exit
+
+  # Creando las lista de acceso para la VLAN 20
+  ip access-list extended 120
+    permit ip 172.15.XX.96 0.0.0.15 192.169.XX.64 0.0.0.63
+    deny ip any any
+    exit
+  # Aplicando el bloqueo en la interfaz o subinterfaz
+  interface GigabitEthernet 0/0/0.20
+    ip access-group 120 in
+    exit
+
+  # Creando las lista de acceso para la VLAN 30
+  ip access-list extended 130
+    permit ip 172.15.XX.64 0.0.0.31 192.169.XX.128 0.0.0.31
+    deny ip any any
+    exit
+  # Aplicando el bloqueo en la interfaz o subinterfaz
+  interface GigabitEthernet 0/0/0.30
+    ip access-group 130 in
+    exit
 ```
