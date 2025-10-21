@@ -231,3 +231,7 @@ configure terminal
     ip access-group 130 in
     exit
 ```
+
+## Video Explicación
+
+[![Video Listas de Acceso](https://img.youtube.com/vi/N8XYMxKWz9E/0.jpg)](https://www.youtube.com/watch?v=N8XYMxKWz9E)
