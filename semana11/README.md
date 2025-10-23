@@ -193,6 +193,11 @@ configure terminal
 
 # Firewall (LISTAS DE ACCESO EXTENDIDAS)
 
+- Las reglas se irán evaluando desde la primera colocada hasta la última, si en la primera no aplica, pasará a la siguiente y así hasta finalizar o hasta encontrar alguna que si aplique (si encuentra alguna que si aplique ya no revisará las demás de abajo).
+Para realizar estas listas es muy importante mencionar lo siguiente
+- La última regla siempre por defecto en las listas de acceso es denegar todo, por lo que si no se colocan correctamente las reglas, o en el orden correcto, se puede romper la comunicación.
+- Las reglas se pueden configurar para realizar bloqueos por mac, por puertos o por protocolos como en el siguiente ejemplo, que se muestra cómo permitir o denegar el acceso por el protocolo IP.
+
 ## Comandos utilizados
 
 ```bash
@@ -201,9 +206,10 @@ enable
 configure terminal
   # Creando las lista de acceso para la VLAN 10
   ip access-list extended 110 # Las extendidas trabajan entre el 100 y 199
-    # <any/permit> <protocolo> <RED_DESDE> <WILD_DESDE> <RED_HASTA> <WILD_HASTA>
+    # Creando las reglas:
+    # <permit/deny> <protocolo> <RED_ORIGEN> <WILD_ORIGEN> <RED_DESTINO> <WILD_DESTINO>
     permit ip 172.15.XX.0 0.0.0.63 192.169.XX.0 0.0.0.63
-    # Aqui se pueden seguir poniendo redes a las que se desea que tenga comunicación
+    # Aqui se pueden seguir poniendo reglas (más redes a las que se desea que tenga comunicación por ejemplo)
     deny ip any any
     exit
   # Aplicando el bloqueo en la interfaz o subinterfaz
